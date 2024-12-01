@@ -1,5 +1,13 @@
 <template>
-    <h1>MY ブログ</h1>
-    <h2>準備中...</h2>
-    <NuxtLink to="/article/20241201">遷移</NuxtLink>
+    <main>
+        <ContentList path="/article" v-slot="{ list }">
+            <div v-for="article in list" :key="article._path">
+                <NuxtLink :to="article._path">
+                    <div>
+                        {{ article.title }}
+                    </div>
+                </NuxtLink>
+            </div>
+        </ContentList>
+    </main>
 </template>
