@@ -5,19 +5,24 @@ import Card from '~/components/Card.vue';
 
 <template>
     <main>
-        <ContentList path="/article" v-slot="{ list }">
-            <Card v-for="article in list" :key="article._path">
-                <NuxtLink :to="article._path">
-                    <div class="card_body">
-                        <div class="card_title">
-                            {{ article.title }}
+        <ContentList path="/article">
+            <template #default="{ list }">
+                <Card v-for="article in list" :key="article._path">
+                    <NuxtLink :to="article._path">
+                        <div class="card_body">
+                            <div class="card_title">
+                                {{ article.title }}
+                            </div>
+                            <div class="card_date">
+                                {{ article.date }}
+                            </div>
                         </div>
-                        <div class="card_date">
-                            {{ article.date }}
-                        </div>
-                    </div>
-                </NuxtLink>
-            </Card>
+                    </NuxtLink>
+                </Card>
+            </template>
+            <template #not-found>
+                <p>No articles found.</p>
+            </template>
         </ContentList>
     </main>
 </template>
