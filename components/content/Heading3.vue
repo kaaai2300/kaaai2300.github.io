@@ -5,6 +5,7 @@
 </template>
 <style scoped>
 h3 {
+    color: #1A1A1C;
     font-size: 24px;
     margin: 32px 0;
 }

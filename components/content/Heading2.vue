@@ -5,6 +5,7 @@
 </template>
 <style scoped>
 h2 {
+    color: #1A1A1C;
     font-size: 26px;
     border-left: solid 3px #F36304;
     padding-left: 8px;

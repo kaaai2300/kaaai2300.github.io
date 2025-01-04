@@ -6,5 +6,6 @@
 <style scoped>
 h1 {
     margin: 32px 0;
+    color: #1A1A1C;
 }
 </style>
