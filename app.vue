@@ -1,12 +1,19 @@
 <template>
-  <div class="body">
+  <NuxtLayout>
     <NuxtPage/>
-  </div>
+  </NuxtLayout>
 </template>
-<style scoped>
-.body {
-  width: auto;
-  max-width: 1032px;
-  margin: 0 auto;
-}
+<script setup lang="ts">
+useHead({
+  bodyAttrs: {
+    class: 'body',
+    style: 'margin: 0;'
+  },
+})
+</script>
+<style>
+/* html,body, #__nuxt, #__layout{
+  height:100%!important;
+  width: 100%!important;
+} */
 </style>
