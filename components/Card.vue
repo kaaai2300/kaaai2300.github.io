@@ -10,6 +10,7 @@ import { Title } from '#build/components';
 </template>
 <style scoped>
 .card {
+    margin: 0 0 8px 0;
     border: 1px solid #eaeaea;
     background-color: #f9f9f9;
     border-radius: 12px

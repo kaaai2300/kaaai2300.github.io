@@ -5,7 +5,7 @@ import Card from '~/components/Card.vue';
 
 <template>
     <main>
-        <ContentList path="/article">
+        <ContentList path="/article" :query="{ sort: [{ date: -1 }] }">
             <template #default="{ list }">
                 <Card v-for="article in list" :key="article._path">
                     <NuxtLink :to="article._path">
