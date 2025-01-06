@@ -2,7 +2,9 @@
     <div style="height: 100%;">
         <header>kaaai2300</header>
         <div class="container">
-            <slot></slot>
+            <div class="container-inner">
+                <slot></slot>
+            </div>
         </div>
         <footer>
             © kaaai2300 2025
@@ -27,5 +29,8 @@ footer {
   height: 100%;
   max-width: 1032px;
   margin: 0 auto;
+}
+.container-inner {
+    padding: 0 16px;
 }
 </style>
